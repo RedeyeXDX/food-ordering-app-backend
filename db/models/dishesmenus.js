@@ -4,7 +4,6 @@ const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class DishesMenus extends Model {
     static associate(models) {
-      // Many-to-Many relationship between Menus and Dishes
       models.Menu.belongsToMany(models.Dish, {
         through: DishesMenus,
         foreignKey: "menu_id",
@@ -18,11 +17,6 @@ module.exports = (sequelize, DataTypes) => {
 
   DishesMenus.init(
     {
-      id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
-        primaryKey: true,
-      },
       menu_id: {
         type: DataTypes.UUID,
         allowNull: false,

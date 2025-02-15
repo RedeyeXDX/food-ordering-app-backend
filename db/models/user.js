@@ -8,7 +8,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      User.hasMany(models.Cart, { foreignKey: "user_id", as: "cartItems" });
+    }
+
+    // Hash password before saving
+    static async hashPassword(password) {
+      return await bcrypt.hash(password, 10);
     }
   }
   User.init(
@@ -21,7 +26,10 @@ module.exports = (sequelize, DataTypes) => {
       },
       name: { type: DataTypes.STRING, allowNull: false },
       email: { type: DataTypes.STRING, allowNull: false, unique: true },
-      authId: { type: DataTypes.STRING, allowNull: false, unique: true },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     {
       sequelize,

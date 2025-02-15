@@ -2,17 +2,14 @@ const db = require("../db/models/index");
 
 const getMenusWithDishes = async (req, res) => {
   try {
-    const { id } = req.params; // Fix destructuring
-
-    console.log("Restaurant ID received:", id); // Debugging line
-
+    const { id } = req.params;
     const menus = await db.Menu.findAll({
       where: { restaurant_id: id },
       include: [
         {
           model: db.Dish,
           through: { attributes: [] },
-          as: "dishes",
+          as: "Dishes",
         },
       ],
     });

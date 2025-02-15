@@ -8,11 +8,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // Many-to-Many relationship with Dish using DishesMenus
       Menu.belongsToMany(models.Dish, {
         through: models.DishesMenus,
-        foreignKey: "menu_id",
         as: "dishes",
+        foreignKey: "menu_id",
       });
 
       Menu.belongsTo(models.Restaurant, {

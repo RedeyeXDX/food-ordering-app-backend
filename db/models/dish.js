@@ -2,11 +2,6 @@
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Dish extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       Dish.belongsToMany(models.Menu, {
         through: models.DishesMenus,
@@ -18,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "restaurant_id",
         as: "restaurant",
       });
+      Dish.hasMany(models.Cart, { foreignKey: "dish_id", as: "cartItems" });
     }
   }
   Dish.init(

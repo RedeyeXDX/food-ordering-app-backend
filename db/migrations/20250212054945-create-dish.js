@@ -8,7 +8,7 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4, // Ensures UUIDs auto-generate
+        defaultValue: Sequelize.UUIDV4,
       },
       food_name: {
         type: Sequelize.STRING,
