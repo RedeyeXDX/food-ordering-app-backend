@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         allowNull: false,
       },
-      food_id: {
+      dish_id: {
         type: DataTypes.UUID,
         allowNull: false,
       },

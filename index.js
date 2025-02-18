@@ -1,5 +1,4 @@
 require("dotenv").config();
-
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -13,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/restaurant", restaurantRouter);
 app.use("/menu", menuRouter);
-app.use("carts", cartsRouter);
+app.use("/cart", cartsRouter);
 app.use("/auth", authRouter);
 
 console.log("Successfully connected to DB!");

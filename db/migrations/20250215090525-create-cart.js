@@ -12,7 +12,7 @@ module.exports = {
       user_id: {
         type: Sequelize.UUID,
       },
-      food_id: {
+      dish_id: {
         type: Sequelize.UUID,
       },
       quantity: {
