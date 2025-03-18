@@ -63,7 +63,7 @@ const removeFromCart = async (req, res) => {
 
 const updateCart = async (req, res) => {
   try {
-    const { dish_id, user_id, quantity } = req.body; // ✅ Get dish_id from request body
+    const { dish_id, user_id, quantity } = req.body;
 
     if (!dish_id || !user_id || quantity === undefined) {
       return res.status(400).json({ error: "Invalid data" });
