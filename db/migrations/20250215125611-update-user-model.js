@@ -19,7 +19,7 @@ module.exports = {
     await queryInterface.changeColumn("Users", "email", {
       type: Sequelize.STRING,
       allowNull: false,
-      unique: false, // Revert changes if needed
+      unique: false,
     });
 
     await queryInterface.changeColumn("Users", "password", {

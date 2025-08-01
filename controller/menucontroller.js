@@ -9,7 +9,7 @@ const getMenusWithDishes = async (req, res) => {
         {
           model: db.Dish,
           through: { attributes: [] },
-          as: "Dishes",
+          as: "dishes",
         },
       ],
     });

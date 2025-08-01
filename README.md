@@ -1,27 +1,79 @@
-# food ordering app backend
+# 🍽️ Food Ordering App - Backend
 
-- this app is a food ordering concept app that allow user to place order and track there order progression using firebase realtime database
+This is the backend service for a food ordering concept app. It allows users to place orders, authenticate, and track their order progression using **Firebase Realtime Database**, **MySQL**, and **Express.js**.
 
-## Features
+---
 
-This app allows users to:
+## 📦 Features
 
-- place order from the ui to the cart.
-- **Authenticate** themselves to gain access to the app with approved credentials.
-- **Sign up** allow user to create a account to let them access to the app.
-- allow user to see your order progression in the order page.
-- User also will be log out of the page after token expire.
+- 🛒 Place orders from the UI and store them in the database
+- 🔐 **JWT Authentication** to protect private routes
+- 📝 **User registration and login**
+- 📈 View order progression per user
+- ⏳ Auto logout after token expiration (JWT expiry handling)
 
-## Built with
+---
 
-- Javescript
-- ExpressJS
-- JWT
-- Sequelize
-- mySQL
-- Firebase Storage
-- ReactJS
+## 🛠️ Built With
 
-## API required
+- **JavaScript**
+- **Express.js**
+- **JWT (JSON Web Token)**
+- **Sequelize (ORM)**
+- **MySQL**
+- **Firebase Storage**
+- **ReactJS** (for frontend — see [Frontend Repo](https://github.com/RedeyeXDX/food-ordering-app-frontend))
 
-- Firebase
+---
+
+## 🔧 API & Services Used
+
+- **Firebase Realtime Database**
+- **Firebase Storage**
+
+---
+
+## 📁 Project Structure
+
+project-root/
+├── controllers/
+├── models/
+├── routes/
+├── middleware/
+├── config/
+└── server.js
+
+yaml
+Copy
+Edit
+
+## 🚀 Getting Started
+
+### 🔨 Prerequisites
+
+- Node.js v18+
+- MySQL installed and running
+- Firebase project setup (for Realtime DB and Storage)
+
+### 🧪 Setup
+
+```bash
+git clone https://github.com/RedeyeXDX/food-ordering-app-backend.git
+cd food-ordering-app-backend
+npm install
+
+
+---
+
+### ENV
+
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=yourpassword
+DB_NAME=food_ordering
+JWT_SECRET=your_jwt_secret
+FIREBASE_API_KEY=...
+FIREBASE_PROJECT_ID=...
+FIREBASE_STORAGE_BUCKET=...
+```
