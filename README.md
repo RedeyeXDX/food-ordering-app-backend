@@ -36,14 +36,20 @@ This is the backend service for a food ordering concept app. It allows users to 
 ## 📁 Project Structure
 
 project-root/
-├── controllers/
-├── models/
-├── routes/
-├── middleware/
-├── config/
-└── server.js
-
----
+├── backend/
+│ ├── db/
+│ │ └── models/ # Sequelize models
+│ ├── seeders/ # Seed data for development
+│ ├── middleware/ # Express middleware
+│ ├── router/ # Route handlers
+│ │ ├── authRouter.js
+│ │ ├── cartRouter.js
+│ │ ├── menuRouter.js
+│ │ └── restaurantRouter.js
+│ ├── .env # Environment variables
+│ ├── index.js # Main entry point
+│ ├── package.json # Project metadata and dependencies
+│ └── README.md # Project documentation
 
 ## 🚀 Getting Started
 
