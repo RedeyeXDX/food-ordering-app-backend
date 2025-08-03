@@ -1,12 +1,12 @@
 "use strict";
 
-const { v4: uuidv4 } = require("uuid");
+const ids = require("../seeders/seed.ids");
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert("Restaurants", [
       {
-        id: uuidv4(),
+        id: ids.KFC_ID,
         title: "Kentucky Fried Chicken",
         description: "It's Finger Lickin' Good.",
         imageUrl:
@@ -15,7 +15,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuidv4(),
+        id: ids.MCDONALD_ID,
         title: "McDonald",
         description: "I'm Lovin' It",
         imageUrl:
@@ -24,7 +24,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: uuidv4(),
+        id: ids.PIZZAHUT_ID,
         title: "Pizza Hut",
         description: "No one outpizzas the hut",
         imageUrl:
@@ -36,11 +36,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    await queryInterface.bulkDelete("Restaurants", null, {});
   },
 };

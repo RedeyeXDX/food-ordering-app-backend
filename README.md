@@ -22,7 +22,7 @@ This is the backend service for a food ordering concept app. It allows users to 
 - **Sequelize (ORM)**
 - **MySQL**
 - **Firebase Storage**
-- **ReactJS** (for frontend — see [Frontend Repo](https://github.com/RedeyeXDX/food-ordering-app-frontend))
+- **ReactJS** (Frontend — see [Frontend Repo](https://github.com/RedeyeXDX/food-ordering-app-frontend))
 
 ---
 
@@ -43,9 +43,7 @@ project-root/
 ├── config/
 └── server.js
 
-yaml
-Copy
-Edit
+---
 
 ## 🚀 Getting Started
 
@@ -53,27 +51,35 @@ Edit
 
 - Node.js v18+
 - MySQL installed and running
-- Firebase project setup (for Realtime DB and Storage)
+- Firebase project setup (Realtime DB + Storage)
 
 ### 🧪 Setup
 
-```bash
+## 🚀 Getting Started
+
+### 🔨 Prerequisites
+
+- Node.js v18+
+- MySQL installed and running
+- Firebase project setup (Realtime DB + Storage)
+
+### 🧪 Setup
+
+bash
 git clone https://github.com/RedeyeXDX/food-ordering-app-backend.git
 cd food-ordering-app-backend
 npm install
 
+### Environment Variables
 
----
+Create a .env file in the root directory with the following:
 
-### ENV
-
-PORT=5000
+PORT=8080
 DB_HOST=localhost
 DB_USER=root
 DB_PASS=yourpassword
 DB_NAME=food_ordering
 JWT_SECRET=your_jwt_secret
-FIREBASE_API_KEY=...
-FIREBASE_PROJECT_ID=...
-FIREBASE_STORAGE_BUCKET=...
-```
+FIREBASE_API_KEY=your_firebase_key
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_STORAGE_BUCKET=your_bucket_url

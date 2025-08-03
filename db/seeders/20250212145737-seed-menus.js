@@ -1,27 +1,27 @@
 "use strict";
-const { v4: uuidv4 } = require("uuid");
+const ids = require("../seeders/seed.ids");
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("Menu", [
       {
-        id: uuidv4(),
+        id: ids.KFC_MENU_ID,
         name: "KFC Menus",
-        restaurant_id: "e77e77e8-5afc-400f-a5f4-64f7c2fd3af3",
+        restaurant_id: ids.KFC_ID,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        id: uuidv4(),
+        id: ids.MCDONALD_MENU_ID,
         name: "McDonald Menu",
-        restaurant_id: "009548c2-d03b-4c0d-9a79-17f8c477d361",
+        restaurant_id: ids.MCDONALD_ID,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
-        id: uuidv4(),
+        id: ids.PIZZAHUT_MENU_ID,
         name: "Pizza Hut Menu",
-        restaurant_id: "d49e8f3d-1a63-4b9c-96b9-090198c729f1",
+        restaurant_id: ids.PIZZAHUT_ID,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
