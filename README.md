@@ -35,6 +35,7 @@ This is the backend service for a food ordering concept app. It allows users to 
 
 ## 📁 Project Structure
 
+```
 project-root/
 ├── backend/
 │ ├── db/
@@ -50,6 +51,7 @@ project-root/
 │ ├── index.js # Main entry point
 │ ├── package.json # Project metadata and dependencies
 │ └── README.md # Project documentation
+```
 
 ## 🚀 Getting Started
 
